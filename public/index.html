@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Biblioteca</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>📚 Biblioteca</h1>
+        <p>Sistema de gerenciamento da biblioteca</p>
+    </header>
+
+    <nav>
+        <button onclick="mostrarSecao('livros')">Livros</button>
+        <button onclick="mostrarSecao('autores')">Autores</button>
+        <button onclick="mostrarSecao('categorias')">Categorias</button>
+        <button onclick="mostrarSecao('avaliacoes')">Avaliações</button>
+    </nav>
+
+
+    <!-- ================= LIVROS ================= -->
+
+    <section id="livros">
+
+        <h2>Livros</h2>
+
+        <div class="formulario">
+
+            <input type="hidden" id="livroId">
+
+            <label>Título:</label>
+            <input type="text" id="livroTitulo">
+
+            <label>Ano de publicação:</label>
+            <input type="number" id="livroAno">
+
+            <label>Categoria:</label>
+            <select id="livroCategoria"></select>
+
+            <label>Autor:</label>
+            <select id="livroAutor"></select>
+
+            <button onclick="salvarLivro()">Salvar livro</button>
+
+        </div>
+
+        <h3>Livros cadastrados</h3>
+
+        <div id="listaLivros"></div>
+
+    </section>
+
+
+    <!-- ================= AUTORES ================= -->
+
+    <section id="autores" style="display:none">
+
+        <h2>Autores</h2>
+
+        <div class="formulario">
+
+            <input type="hidden" id="autorId">
+
+            <label>Nome:</label>
+            <input type="text" id="autorNome">
+
+            <button onclick="salvarAutor()">Salvar autor</button>
+
+        </div>
+
+        <h3>Autores cadastrados</h3>
+
+        <div id="listaAutores"></div>
+
+    </section>
+
+
+    <!-- ================= CATEGORIAS ================= -->
+
+    <section id="categorias" style="display:none">
+
+        <h2>Categorias</h2>
+
+        <div class="formulario">
+
+            <input type="hidden" id="categoriaId">
+
+            <label>Nome:</label>
+            <input type="text" id="categoriaNome">
+
+            <button onclick="salvarCategoria()">Salvar categoria</button>
+
+        </div>
+
+        <h3>Categorias cadastradas</h3>
+
+        <div id="listaCategorias"></div>
+
+    </section>
+
+
+    <!-- ================= AVALIAÇÕES ================= -->
+
+    <section id="avaliacoes" style="display:none">
+
+        <h2>Avaliações</h2>
+
+        <div class="formulario">
+
+            <label>ID do livro:</label>
+            <input type="number" id="avaliacaoLivroId">
+
+            <label>Usuário:</label>
+            <input type="text" id="avaliacaoUsuario">
+
+            <label>Nota:</label>
+            <input type="number" id="avaliacaoNota" min="1" max="5">
+
+            <label>Comentário:</label>
+            <textarea id="avaliacaoComentario"></textarea>
+
+            <button onclick="salvarAvaliacao()">Adicionar avaliação</button>
+
+        </div>
+
+        <h3>Avaliações</h3>
+
+        <div id="listaAvaliacoes"></div>
+
+    </section>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>

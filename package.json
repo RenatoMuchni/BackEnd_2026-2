@@ -1,0 +1,26 @@
+{
+  "name": "backend_2026-2",
+  "version": "1.0.0",
+  "description": "**Disciplina:** Programação Web Back-End (AS63A) - UTFPR",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RenatoMuchni/BackEnd_2026-2.git"
+  },
+  "keywords": [],
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/RenatoMuchni/BackEnd_2026-2/issues"
+  },
+  "homepage": "https://github.com/RenatoMuchni/BackEnd_2026-2#readme",
+  "dependencies": {
+    "express": "^5.2.1",
+    "mongoose": "^9.10.4",
+    "pg": "^8.23.1",
+    "pg-hstore": "^2.3.4",
+    "sequelize": "^6.37.8"
+  }
+}
